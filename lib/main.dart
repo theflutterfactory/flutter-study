@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_app/topics/coding_basics/zoo.dart';
 import 'package:test_app/topics/column_row_code.dart';
 import 'package:test_app/topics/derfault_code.dart';
 import 'package:test_app/topics/gridview_code.dart';
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<Home> {
         title: Text('Home'),
       ),
       body: ListView.separated(
-        itemCount: 3,
+        itemCount: 4,
         separatorBuilder: (BuildContext context, int index) => const Divider(),
         itemBuilder: (BuildContext context, int index) {
           switch (index) {
@@ -69,6 +70,17 @@ class _MyHomePageState extends State<Home> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => ColumnRowCode(),
+                  ),
+                ),
+              );
+              break;
+              case 3: 
+              return ListTile(
+                title: Text('The Basics'),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Zoo(),
                   ),
                 ),
               );
